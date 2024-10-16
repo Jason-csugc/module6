@@ -17,5 +17,5 @@ class ItemToPurchase:
         '''Print item cost with follwoing format:
            Bottled Water 10 @ $1 = $10
            '''
-        print(f'{self.item_name} {self.item_quantity} @ ${self.item_price:.2f} = {(self.item_price * self.item_quantity):.2f}')
+        print(f'{self.item_name} {self.item_quantity} @ ${self.item_price:.2f} = ${(self.item_price * self.item_quantity):.2f}')
     

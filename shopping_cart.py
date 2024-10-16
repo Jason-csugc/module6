@@ -38,7 +38,7 @@ class ShoppingCart:
         item_found = False
 
         for item in self.cart_items:
-            if item.item_name == item_to_modify:
+            if item.item_name == item_to_modify.item_name:
                 item_found = True
                 if item_to_modify.item_price != 0.0:
                     item.item_price = item_to_modify.item_price
@@ -63,7 +63,7 @@ class ShoppingCart:
         total_cost = 0.0
 
         for item in self.cart_items:
-            total_cost += item.item_price + item.item_quantity
+            total_cost += item.item_price * item.item_quantity
 
         return total_cost
 
