@@ -70,7 +70,6 @@ q - Quit \
 Choose an option: c \
 Item to update: Test \
 New quantity: 5 \
-Item not found in cart. Nothing modified. \
 MENU \
 a - Add item to cart \
 r - Remove item from cart \
