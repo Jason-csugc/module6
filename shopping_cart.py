@@ -3,7 +3,7 @@
 import item_to_purchase
 
 class ShoppingCart:
-    '''Defines variables and methos for shopping cart'''
+    '''Defines variables and methods for shopping cart'''
     customer_name = ''
     current_date = ''
     cart_items = []
@@ -66,7 +66,7 @@ class ShoppingCart:
         return total_cost
 
     def print_total(self)-> None:
-        '''Returns formated total of items in cart'''
+        '''Returns formatted total of items in cart'''
         if len(self.cart_items) == 0:
             print('SHOPPING CART IS EMPTY')
 
