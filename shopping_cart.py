@@ -49,8 +49,8 @@ class ShoppingCart:
 
         if item_found is False:
             return 'Item not found in cart. Nothing modified.'
-        else:
-            return None
+
+        return None
 
     def get_num_items_in_cart(self)-> int:
         '''Returns count of all items in cart'''
@@ -74,7 +74,7 @@ class ShoppingCart:
         '''Returns formated total of items in cart'''
         if len(self.cart_items) == 0:
             print('SHOPPING CART IS EMPTY')
-     
+
         print(f'{self.customer_name}\'s Shopping Cart - {self.current_date}')
         print(f'Number of Items: {self.get_num_items_in_cart()}')
         for item in self.cart_items:
