@@ -31,8 +31,10 @@ while user_selection != 'q':
         new_item_description = input('New item description: ')
         new_item_price = float(input('New item price: '))
         new_item_quantity = int(input('New item Quantity: '))
-        cart.add_item(item_to_purchase.ItemToPurchase(item_name=new_item_name, item_description=new_item_description, \
-                                                               item_price=new_item_price, item_quantity=new_item_quantity))
+        cart.add_item(item_to_purchase.ItemToPurchase(item_name=new_item_name, \
+                                                      item_description=new_item_description, \
+                                                      item_price=new_item_price, \
+                                                      item_quantity=new_item_quantity))
     elif user_selection == 'r':
         user_item = input("Item name to remove: ")
         cart.remove_item(user_item)
