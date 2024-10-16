@@ -9,7 +9,7 @@ r - Remove item from cart \
 c - change item quantity \
 i - Output items' descriptions \
 o - Output shopping cart \
-q - Quit \
+q - Quit
 
 ## Output empty cart
 
@@ -17,7 +17,7 @@ Choose an option: o \
 SHOPPING CART IS EMPTY \
 Jason's Shopping Cart - October 16, 2024 \
 Number of Items: 0 \
-Total: $0.00 \
+Total: $0.00
 
 ## Output empty descriptions
 
@@ -29,7 +29,7 @@ r - Remove item from cart \
 c - change item quantity \
 i - Output items' descriptions \
 o - Output shopping cart \
-q - Quit \
+q - Quit
 
 
 ## Add new item
@@ -45,7 +45,7 @@ r - Remove item from cart \
 c - change item quantity \
 i - Output items' descriptions \
 o - Output shopping cart \
-q - Quit \
+q - Quit
 
 
 ## Output shopping cart
@@ -62,7 +62,7 @@ r - Remove item from cart \
 c - change item quantity \
 i - Output items' descriptions \
 o - Output shopping cart \
-q - Quit \
+q - Quit
 
 
 ## Change item quantity
@@ -76,7 +76,7 @@ r - Remove item from cart \
 c - change item quantity \
 i - Output items' descriptions \
 o - Output shopping cart \
-q - Quit \
+q - Quit
 
 
 ## Output shopping cart after update
@@ -95,4 +95,4 @@ r - Remove item from cart \
 c - change item quantity \
 i - Output items' descriptions \
 o - Output shopping cart \
-q - Quit \
+q - Quit
