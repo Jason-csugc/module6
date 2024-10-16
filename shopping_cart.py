@@ -32,22 +32,60 @@ class ShoppingCart:
 
         return 'Item not found in cart. Nothing removed.'
 
-    def modify_item(item_to_modify:item_to_purchase.ItemToPurchase):
-        return None
-    
+    def modify_item(self, item_to_modify:item_to_purchase.ItemToPurchase) -> str:
+        '''Modify an items description, price or quantity if they are the default values.'''
 
-    def get_num_items_in_cart():
-        return None
+        item_found = False
 
+        for item in self.cart_items:
+            if item.item_name == item_to_modify:
+                item_found = True
+                if item.item_price == 0.0:
+                    item.item_price = item_to_modify.item_price
+                if item.item_quantity == '':
+                    item.item_quantity = item_to_modify.item_quantity
+                if item.item_description == '':
+                    item.item_description = item_to_modify.item_description
 
-    def get_cost_of_cart():
-        return None
-    
+        if item_found is False:
+            return 'Item not found in cart. Nothing modified.'
+        else:
+            return None
 
-    def print_total():
-        return None
-    
-    def print_descriptions():
-        return None
+    def get_num_items_in_cart(self)-> int:
+        '''Returns count of all items in cart'''
+        total_sum = 0
+        for item in self.cart_items:
+            total_sum += item.item_quantity
 
-    
+        return total_sum
+
+    def get_cost_of_cart(self)-> float:
+        '''Returns sum of all items cost'''
+
+        total_cost = 0.0
+
+        for item in self.cart_items:
+            total_cost += item.item_price + item.item_quantity
+
+        return total_cost
+
+    def print_total(self)-> None:
+        '''Returns formated total of items in cart'''
+        if len(self.cart_items) == 0:
+            print('SHOPPING CART IS EMPTY')
+     
+        print(f'{self.customer_name}\'s Shopping Cart - {self.current_date}')
+        print(f'Number of Items: {self.get_num_items_in_cart()}')
+        for item in self.cart_items:
+            print(item.print_item_cost)
+        print(f'Total: ${self.get_cost_of_cart:.2f}')
+
+    def print_descriptions(self)-> None:
+        '''Prints cart description'''
+        if len(self.cart_items) == 0:
+            print('SHOPPING CART IS EMPTY')
+        print(f'{self.customer_name}\' Shopping Cart - {self.current_date}')
+        print('Item Descriptions')
+        for item in self.cart_items:
+            print(f'{item.item_name}: {item.item_description}')

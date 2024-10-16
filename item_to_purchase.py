@@ -5,11 +5,13 @@ class ItemToPurchase:
     item_name = ''
     item_price = 0.0
     item_quantity = 0
+    item_description = ''
 
-    def __init__(self, item_name = None, item_price=0, item_quantity=0):
+    def __init__(self, item_name = None, item_price=0, item_quantity=0, item_description = None):
         self.item_name = item_name
         self.item_price = item_price
         self.item_quantity = item_quantity
+        self.item_description = item_description
 
     def print_item_cost(self):
         '''Print item cost with follwoing format:
